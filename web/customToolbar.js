@@ -57,6 +57,8 @@ function editToolBar() {
     removeElement('pageNumber')
     removeElement('numPages')
     removeElement('sidebarToggle')
+    removeElement('zoomIn')
+    removeElement('zoomOut')
 }
 
 function changeIcon(elemID, iconUrl) {

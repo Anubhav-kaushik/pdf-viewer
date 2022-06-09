@@ -1123,12 +1123,25 @@ select {
 #viewerContainer {
   overflow: auto;
   position: absolute;
-  top: 32px;
+  top: 0; /* 32px */
   right: 0;
   bottom: 0;
   left: 0;
   outline: none;
+  scrollbar-width: thin;
+  scrollbar-color: #ccca #eee3;
 }
+
+#viewerContainer::-webkit-scrollbar {
+  background-color: #eee3;
+  border-radius: 4px;
+}
+
+#viewerContainer::-webkit-scrollbar-thumb {
+  background-color: #ccca;
+  border-radius: 4px;
+}
+
 #viewerContainer:not(.pdfPresentationMode) {
   transition-duration: var(--sidebar-transition-duration);
   transition-timing-function: var(--sidebar-transition-timing-function);
