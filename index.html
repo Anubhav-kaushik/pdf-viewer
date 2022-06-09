@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #pdf-viewer {
+            width: 90vw;
+            margin-inline: auto;
+            margin-block: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        #pdf-render {
+            width: 100%;
+            max-width: 1350px;
+            height: 95vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pdf-viewer">
+        <iframe id="pdf-render" src="/web/viewer.html?file=%2Fcpi.pdf" title="webviewer" frameborder="0" ></iframe>
+    </div>
+    
+    <script>
+        let pdfViewer = document.querySelector('#pdf-render');
+        setTimeout(() => {
+            const iframeViewer = pdfViewer.querySelector('#viewerContainer');
+            console.log(iframeViewer);
+        }, 2000);
+    </script>
+</body>
+
+</html>
